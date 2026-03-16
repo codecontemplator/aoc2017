@@ -1,0 +1,13 @@
+N    ← 361527
+R    ← ⌊÷2+1√-1 N
+P    ← ˙×-1×2 R
+L    ← × 2 R
+D    ← -1 -P N
+Side ← ⌊ ÷ L D
+O    ← ◿ L D
+
+X ← [R]           # TODO: add more terms
+Y ← [(++¯ R 1 O)] # TODO: add more terms
+⊡ Side X
+⊡ Side Y
++
