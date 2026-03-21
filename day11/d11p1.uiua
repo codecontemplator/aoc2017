@@ -1,17 +1,19 @@
-#WIP
-
 # https://www.redblobgames.com/grids/hexagons/
+# https://adventofcode.com/2017/day/11
 
-# &fras "d11_input.txt"
-"se,sw,se,sw,sw"
-⊜□⊸≠@,
+&fras "d11_input.txt"
+▽⊸≠@\n # clean input
+⊜□⊸≠@, # split by ,
 
-C ← [0_¯1
-     1_¯1
-     1_0
-     0_1
-     ¯1_0
-     ¯1_¯1]
-I       ← [□"n" □"ne" □"se" □"s" □"sw" □"nw"]
-ToCoord ← ˜⊡ C ⨂ I
-≡ToCoord
+I ← [□"n" □"ne" □"se" □"s" □"sw" □"nw"]
+
+# cube coordinates: q, r, s
+C ← [0_¯1_1
+     1_¯1_0
+     1_0_¯1
+     0_1_¯1
+     ¯1_1_0
+     ¯1_0_1]
+I ← [□"n" □"ne" □"se" □"s" □"sw" □"nw"]
+≡(˜⊡ C ⨂ I)
+÷2/+⌵/+
